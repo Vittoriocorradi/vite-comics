@@ -14,7 +14,9 @@
 </script>
 
 <template>
-    <AppFooterNav></AppFooterNav>
-    <AppFooterMenu></AppFooterMenu>
-    <AppFooterSocial></AppFooterSocial>
+    <footer>
+        <AppFooterNav></AppFooterNav>
+        <AppFooterMenu></AppFooterMenu>
+        <AppFooterSocial></AppFooterSocial>
+    </footer>
 </template>

@@ -21,7 +21,7 @@
 </template>
 
 <style lang="scss" scoped>
-    @use "../components/styles/general.scss" as *;
+    @use "./styles/general.scss" as *;
   .container-big {
     @include my-container(80rem);
     @include my-flex(flex, space-between, center)

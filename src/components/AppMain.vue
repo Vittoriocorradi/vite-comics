@@ -27,7 +27,7 @@
             @include my-container(80rem);
             @include my-flex(flex, start, center);
             color: #fff;
-            font-size: 2em;
+            font-size: 1.6em;
             height: 100%;
         }
     }

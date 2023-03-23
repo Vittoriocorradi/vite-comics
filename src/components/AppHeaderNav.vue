@@ -6,52 +6,52 @@
                 navList: [
                 {
                     name: 'characters',
-                    link: '#',
+                    ref: '#',
                     destination: '_self'
                 },
                 {
                     name: 'comics',
-                    link: '#',
+                    ref: '#',
                     destination: '_self'
                 },
                 {
                     name: 'movie',
-                    link: '#',
+                    ref: '#',
                     destination: '_self'
                 },
                 {
                     name: 'tv',
-                    link: '#',
+                    ref: '#',
                     destination: '_self'
                 },
                 {
                     name: 'games',
-                    link: '#',
+                    ref: '#',
                     destination: '_self'
                 },
                 {
                     name: 'collectibles',
-                    link: '#',
+                    ref: '#',
                     destination: '_self'
                 },
                 {
                     name: 'videos',
-                    link: '#',
+                    ref: '#',
                     destination: '_self'
                 },
                 {
                     name: 'fans',
-                    link: '#',
+                    ref: '#',
                     destination: '_self'
                 },
                 {
                     name: 'news',
-                    link: '#',
+                    ref: '#',
                     destination: '_self'
                 },
                 {
                     name: 'shop',
-                    link: '#',
+                    ref: '#',
                     destination: '_self'
                 },
                 ]
@@ -63,27 +63,38 @@
 <template>
     <ul>
         <li v-for="item in navList">
-            <a :href="item.link" :target="item.destination">{{ item.name }}</a>
+            <a :href="item.ref" :target="item.destination">
+                <span> {{ item.name }} </span>
+            </a>
         </li>
     </ul>
 </template>
 
 <style lang="scss" scoped>
-    @use "../components/styles/general.scss" as *;
-    @use "../components/styles/variables.scss" as *;
+    @use "./styles/general.scss" as *;
+    @use "./styles/variables.scss" as *;
 
     ul {
         display: flex;
         list-style-type: none;
         li {
             height: 100%;
+            
             a {
                 display: inline-block;
                 text-decoration: none;
                 color: #464646;
-                padding: 3.25rem 1.0625rem;
+                padding: 0 1.0625rem;
+                text-transform: uppercase;
+                font-size: 14px;
             }
-            &:nth-child(2) a {
+            
+            span {
+                display: inline-block;
+                padding: 3.25rem 0;
+            }
+            
+            &:nth-child(2) span {
                 border-bottom: .3125rem solid $primary-color;
                 color: $primary-color;
             }
