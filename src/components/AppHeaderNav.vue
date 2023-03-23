@@ -84,6 +84,7 @@
                 display: inline-block;
                 text-decoration: none;
                 color: #464646;
+                font-weight: 700;
                 padding: 0 1.0625rem;
                 text-transform: uppercase;
                 font-size: 14px;

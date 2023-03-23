@@ -8,4 +8,8 @@ Il progetto deve essere diviso in componenti.
 
 Installare le dipendenze   --->  npm install
 
+Installare Sass ---> npm add -D sass
+
+Installare Open Sans ---> npm install @fontsource/open-sans
+
 Provare nel browser   ---> npm run dev
