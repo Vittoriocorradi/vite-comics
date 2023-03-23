@@ -12,6 +12,18 @@
 </script>
 
 <template>
-    <AppHeaderLogo></AppHeaderLogo>
-    <AppHeaderNav></AppHeaderNav>
+    <header>
+        <div class="container-big">
+            <AppHeaderLogo></AppHeaderLogo>
+            <AppHeaderNav></AppHeaderNav>
+        </div>
+    </header>
 </template>
+
+<style lang="scss" scoped>
+    @use "../components/styles/general.scss" as *;
+  .container-big {
+    @include my-container(80rem);
+    @include my-flex(flex, space-between, center)
+  }
+</style>

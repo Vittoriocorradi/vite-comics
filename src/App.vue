@@ -13,11 +13,14 @@
 </script>
 
 <template>
-  <AppHeader></AppHeader>
-  <AppMain></AppMain>
-  <AppFooter></AppFooter>
+  <div class="container">
+    <AppHeader></AppHeader>
+    <AppMain></AppMain>
+    <AppFooter></AppFooter>
+  </div>
+  
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
