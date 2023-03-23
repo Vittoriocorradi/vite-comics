@@ -135,6 +135,7 @@
                         text-decoration: none;
                         color: #959595;
                         padding: .125rem 0;
+                        font-size: .8125rem;
                     }
                 }
             }
