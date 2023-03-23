@@ -56,7 +56,7 @@
 </script>
 
 <template>
-    <div class="background">
+    <section class="background">
         <div class="container-big">
             <div>
                 <h1>
@@ -97,7 +97,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
