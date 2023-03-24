@@ -7,54 +7,75 @@
                 {
                     name: 'characters',
                     ref: '#',
-                    destination: '_self'
+                    destination: '_self',
+                    isActive: true
                 },
                 {
                     name: 'comics',
                     ref: '#',
-                    destination: '_self'
+                    destination: '_self',
+                    isActive: false
                 },
                 {
                     name: 'movie',
                     ref: '#',
-                    destination: '_self'
+                    destination: '_self',
+                    isActive: false
                 },
                 {
                     name: 'tv',
                     ref: '#',
-                    destination: '_self'
+                    destination: '_self',
+                    isActive: false
                 },
                 {
                     name: 'games',
                     ref: '#',
-                    destination: '_self'
+                    destination: '_self',
+                    isActive: false
                 },
                 {
                     name: 'collectibles',
                     ref: '#',
-                    destination: '_self'
+                    destination: '_self',
+                    isActive: false
                 },
                 {
                     name: 'videos',
                     ref: '#',
-                    destination: '_self'
+                    destination: '_self',
+                    isActive: false
                 },
                 {
                     name: 'fans',
                     ref: '#',
-                    destination: '_self'
+                    destination: '_self',
+                    isActive: false
                 },
                 {
                     name: 'news',
                     ref: '#',
-                    destination: '_self'
+                    destination: '_self',
+                    isActive: false
                 },
                 {
                     name: 'shop',
                     ref: '#',
-                    destination: '_self'
+                    destination: '_self',
+                    isActive: false
                 },
                 ]
+            }
+        },
+        methods: {
+            activeItem(i) {
+                this.navList.forEach((el, index) => {
+                    if (i === index) {
+                        el.isActive = true;
+                    } else {
+                        el.isActive = false;
+                    }
+                })
             }
         }
     }
@@ -62,9 +83,9 @@
 
 <template>
     <ul>
-        <li v-for="item in navList">
-            <a :href="item.ref" :target="item.destination">
-                <span> {{ item.name }} </span>
+        <li v-for="(item, index) in navList">
+            <a :href="item.ref" :target="item.destination" @click.prevent="activeItem(index)">
+                <span :class="{active: item.isActive}"> {{ item.name }} </span>
             </a>
         </li>
     </ul>
@@ -80,6 +101,11 @@
         li {
             height: 100%;
             
+            &:hover {
+                // padding-bottom: .3125rem;
+                background-color: lighten($primary-color, 40%);
+            }
+            
             a {
                 display: inline-block;
                 text-decoration: none;
@@ -88,6 +114,7 @@
                 padding: 0 1.0625rem;
                 text-transform: uppercase;
                 font-size: 14px;
+
             }
             
             span {
@@ -95,9 +122,10 @@
                 padding: 3.25rem 0;
             }
             
-            &:nth-child(2) span {
+            .active {
                 border-bottom: .3125rem solid $primary-color;
                 color: $primary-color;
+                padding-bottom: 2.9375rem;
             }
         }
     }
