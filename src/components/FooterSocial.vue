@@ -44,7 +44,7 @@
                 </div>
                 <div v-for="icon in icons" class="icon">
                     <a href="#">
-                        <img :src="'/src/assets/' + icon.link" :alt="icon.alt">
+                        <img :src="'/src/assets/img/' + icon.link" :alt="icon.alt">
                     </a>
                 </div>
             </div>
@@ -54,8 +54,8 @@
 </template>
 
 <style lang="scss" scoped>
-    @use "./styles/general.scss" as *;
-    @use "./styles/variables.scss" as *;
+    @use "../assets/styles/partials/mixins.scss" as *;
+    @use "../assets/styles/partials/variables.scss" as *;
     section {
         background-color: #303030;
         .container-big {

@@ -47,7 +47,7 @@
                 <a :href="item.ref" :target="item.destination">
                     <div class="link">
                         <div class="img">
-                            <img :src="'/src/assets/' + item.link" :alt="item.title">
+                            <img :src="'/src/assets/img/' + item.link" :alt="item.title">
                         </div>
                         <div>
                             {{ item.title }}
@@ -60,8 +60,8 @@
 </template>
 
 <style lang="scss" scoped>
-    @use "./styles/general.scss" as *;
-    @use "./styles/variables.scss" as *;
+    @use "../assets/styles/partials/mixins.scss" as *;
+    @use "../assets/styles/partials/variables.scss" as *;
 
     section {
         background-color: $primary-color;

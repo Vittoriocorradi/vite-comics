@@ -71,8 +71,8 @@
 </template>
 
 <style lang="scss" scoped>
-    @use "./styles/general.scss" as *;
-    @use "./styles/variables.scss" as *;
+    @use "../assets/styles/partials/mixins" as *;
+    @use "../assets/styles/partials/variables.scss" as *;
 
     ul {
         display: flex;

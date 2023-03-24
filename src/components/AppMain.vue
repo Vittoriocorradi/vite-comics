@@ -18,7 +18,7 @@
 </template>
 
 <style lang="scss" scoped>
-    @use "../components/styles/general.scss" as *;
+    @use "../assets/styles/partials/mixins.scss" as *;
 
     main {
         background-color: #1c1c1c;

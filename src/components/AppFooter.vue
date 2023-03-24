@@ -1,22 +1,22 @@
 <script>
-    import AppFooterNav from './AppFooterNav.vue';
-    import AppFooterMenu from './AppFooterMenu.vue';
-    import AppFooterSocial from './AppFooterSocial.vue';
+    import FooterNav from './FooterNav.vue';
+    import FooterMenu from './FooterMenu.vue';
+    import FooterSocial from './FooterSocial.vue';
 
     export default {
         name: 'Footer',
         components: {
-            AppFooterNav,
-            AppFooterMenu,
-            AppFooterSocial
+            FooterNav,
+            FooterMenu,
+            FooterSocial
         }
     }
 </script>
 
 <template>
     <footer>
-        <AppFooterNav></AppFooterNav>
-        <AppFooterMenu></AppFooterMenu>
-        <AppFooterSocial></AppFooterSocial>
+        <FooterNav></FooterNav>
+        <FooterMenu></FooterMenu>
+        <FooterSocial></FooterSocial>
     </footer>
 </template>

@@ -1,7 +1,8 @@
-import "@fontsource/open-sans";
+import { createApp } from 'vue';
 
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import './assets/styles/main.scss';
+import './assets/js/index.js';
+
+import App from './App.vue';
 
 createApp(App).mount('#app')

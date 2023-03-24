@@ -1,12 +1,12 @@
 <script>
-    import AppHeaderLogo from './AppHeaderLogo.vue';
-    import AppHeaderNav from './AppHeaderNav.vue';
+    import HeaderLogo from './HeaderLogo.vue';
+    import HeaderNav from './HeaderNav.vue';
 
     export default {
         name: 'Header',
         components: {
-            AppHeaderLogo,
-            AppHeaderNav
+            HeaderLogo,
+            HeaderNav
         }
     }
 </script>
@@ -14,14 +14,14 @@
 <template>
     <header>
         <div class="container-big">
-            <AppHeaderLogo></AppHeaderLogo>
-            <AppHeaderNav></AppHeaderNav>
+            <HeaderLogo></HeaderLogo>
+            <HeaderNav></HeaderNav>
         </div>
     </header>
 </template>
 
 <style lang="scss" scoped>
-    @use "./styles/general.scss" as *;
+    @use "../assets/styles/partials/mixins.scss" as *;
   .container-big {
     @include my-container(80rem);
     @include my-flex(flex, space-between, center)

@@ -101,9 +101,9 @@
 </template>
 
 <style lang="scss" scoped>
-    @import './styles/general.scss';
+    @import '../assets/styles/partials/mixins.scss';
     .background {
-        background-image: url('../assets/dc-logo-bg.png'), url('../assets/footer-bg.jpg');
+        background-image: url('../assets/img/dc-logo-bg.png'), url('../assets/img/footer-bg.jpg');
         background-size: auto, cover;
         background-repeat: no-repeat;
         background-position-y: 60%, 0;
