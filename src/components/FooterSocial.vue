@@ -93,6 +93,11 @@
 
                 .icon {
                     margin-left: 1.125rem;
+
+                    &:hover {
+                        filter: brightness(500%);
+                        scale: 1.1;
+                    }
                 }
 
 
