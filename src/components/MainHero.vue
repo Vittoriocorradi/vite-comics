@@ -32,8 +32,8 @@
             bottom: 0;
             left: 0;
             transform: translate(0, 50%);
-            padding: .9375rem 1.875rem;
-            font-size: 1.625rem;
+            padding: .75rem 1.875rem;
+            font-size: 1.5rem;
             text-transform: uppercase;
             color: #fff;
         }
