@@ -104,10 +104,14 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/styles/partials/mixins.scss' as *;
+@use '../assets/styles/partials/variables.scss' as *;
 
 section {
     background-color: #1c1c1c;
-    padding: 3.4375rem 0 1.25rem;
+    padding: 3.4375rem 0 1.5625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
@@ -137,5 +141,16 @@ section {
             font-weight: 400;
         }
     }
+}
+
+button {
+    background-color: $primary-color;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 700;
+    padding: .625rem 3.75rem;
+    cursor: pointer;
+    border: none;
 }
 </style>
