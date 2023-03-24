@@ -1,7 +1,11 @@
 <script>
+import CardElement from './CardElement.vue';
+
 export default {
     name: 'MainComicsList',
-    // components: ,
+    components: {
+        CardElement
+    },
     data() {
         return {
             comicsList: [
@@ -86,14 +90,11 @@ export default {
 <template>
     <section>
         <div class="container">
-            <div class="card">
-                <div class="img">
-                    <img src="https://bleedingcool.com/wp-content/uploads/2018/07/STL086344-900x900.jpg" alt="">
-                </div>
-                <h3>
-                    titolo
-                </h3>
-            </div>
+            <CardElement
+            class="card"
+            v-for="comic in comicsList"
+            :img="comic.thumb"
+            :title="comic.series"/>
         </div>
         <div>
             <button>load more</button>
@@ -118,19 +119,22 @@ section {
     .card {
         width: calc(100% / 6 - 1.875rem);
         margin: 0 .9375rem 3.125rem;
-        background-color: #fff;
+        background-color: inherit;
 
-        .img {
+        :deep(.img) {
             margin-bottom: 1.25rem;
 
             img {
                 max-width: 100%;
-                // height: 11.625rem;
+                display: block;
             }
         }
 
-        h3 {
+        :deep(h3) {
             text-transform: uppercase;
+            font-size: 0.9em;
+            color: #fff;
+            font-weight: 400;
         }
     }
 }
