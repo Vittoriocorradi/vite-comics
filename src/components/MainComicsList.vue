@@ -152,5 +152,12 @@ button {
     padding: .625rem 3.75rem;
     cursor: pointer;
     border: none;
+    transition: scale 0.2s, background-color 0.2s, color 0.2s;
+
+    &:hover {
+        background-color: #fff;
+        color: #464646;
+        scale: 1.1;
+    }
 }
 </style>

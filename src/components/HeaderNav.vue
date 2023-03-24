@@ -100,9 +100,9 @@
         list-style-type: none;
         li {
             height: 100%;
+            transition: background-color 0.2s;
             
             &:hover {
-                // padding-bottom: .3125rem;
                 background-color: lighten($primary-color, 40%);
             }
             

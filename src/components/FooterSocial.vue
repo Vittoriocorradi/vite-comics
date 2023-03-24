@@ -74,6 +74,10 @@
                     text-transform: uppercase;
                     font-family: inherit;
                     cursor: pointer;
+
+                    &:hover {
+                        background-color: $primary-color;
+                    }
                 }
             }
             .icons-group {
