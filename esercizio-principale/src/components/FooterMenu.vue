@@ -30,7 +30,7 @@
                             'Privacy Policy (New)',
                             'Ad Choices',
                             'Advertising',
-                            'jobs',
+                            'Jobs',
                             'Subscriptions',
                             'Talent Workshop',
                             'CPSC Certificates',
@@ -136,6 +136,10 @@
                         color: #959595;
                         padding: .125rem 0;
                         font-size: .8125rem;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
