@@ -6,10 +6,19 @@
         props: {
             img: String,
             title: String,
-            price: String
+            price: String,
+            isShown: Boolean
         },
         components: {
             Price
+        },
+        methods: {
+            myConsoleLog() {
+                console.log(this.isShown);
+            }
+        },
+        mounted() {
+            this.myConsoleLog();
         }
     }
 </script>
@@ -24,10 +33,13 @@
         </h3>
         <Price
         :price="price"
+        :class="{'is-shown': !isShown}"
         />
     </div>
 </template>
 
 <style lang="scss" scoped>
-
+    .is-shown {
+        visibility: hidden;
+    }
 </style>

@@ -81,7 +81,13 @@ export default {
                     "series": "Catwoman",
                     "type": "graphic novel"
                 }
-            ]
+            ],
+            isShown: false
+        }
+    },
+    methods: {
+        showPrices() {
+            this.isShown = !this.isShown;
         }
     }
 }
@@ -95,10 +101,11 @@ export default {
             v-for="comic in comicsList"
             :img="comic.thumb"
             :title="comic.series"
-            :price="comic.price"/>
+            :price="comic.price"
+            :isShown="isShown"/>
         </div>
         <div>
-            <button>load more</button>
+            <button @click="showPrices">show prices</button>
         </div>
     </section>
 </template>
